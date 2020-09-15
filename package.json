@@ -4,6 +4,8 @@
   "description": "Simple koajs for learning",
   "main": "lib/application.js",
   "scripts": {
+    "dev": "nodemon --exec ts-node -e ts,js,json src/application.ts",
+    "debug": "node --inspect-brk=9229 -r ts-node/register src/application.ts",
     "test": "egg-bin test test",
     "test-cov": "egg-bin cov test",
     "lint": "eslint benchmarks lib test",
@@ -12,10 +14,12 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^6.5.1",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   },
   "engines": {
-    "node": "^4.8.4 || ^6.10.1 || ^7.10.1 || >= 8.1.4"
+    "node": ">= 12.18.0"
   },
   "files": [
     "dist",

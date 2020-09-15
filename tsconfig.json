@@ -1,42 +1,20 @@
 {
     "compilerOptions": {
-        "outDir": "./lib",
-        "target": "esnext",
-        "module": "esnext",
-        "strict": true,
-        "jsx": "preserve",
-        "jsxFactory": "VueTsxSupport",
-        "skipLibCheck": false,
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "strictFunctionTypes": true,
-        "esModuleInterop": true,
-        "strictNullChecks": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        // 允许导入json
-        "resolveJsonModule": true,
-        // 生成声明文件
-        "declaration": true,
-        "declarationDir": "./lib/types",
-        // "declarationMap": false,
-        // "emitDeclarationOnly": true,
-        // 编译 js 的时候，删除掉注释
-        "removeComments": true,
-        "baseUrl": ".",
-        "plugins": [{
-            "name": "typescript-plugin-css-modules"
-        }],
-        "lib": [
-            "esnext"
-        ]
+      "module": "commonjs",
+      "declaration": true,
+      "noImplicitAny": false,
+      "noUnusedLocals": false,
+      "removeComments": true,
+      "noLib": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "target": "esnext",
+      "sourceMap": true,
+      "allowJs": true,
+      "outDir": "lib",
+      "lib": ["esnext"]
     },
-    "include": [
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules/**",
-        "**/*.spec.ts"
-    ]
-}
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
+  
